@@ -1,118 +1,226 @@
-# Stellar Notes DApp
 
-**Stellar Notes DApp** - Blockchain-Based Decentralized Note-Taking System
+---
+
+#  Meowdoro DApp
+
+**Meowdoro DApp** – Blockchain-Based Focus-to-Earn Productivity System
+
+---
 
 ## Project Description
 
-Stellar Notes DApp is a decentralized smart contract solution built on the Stellar blockchain using Soroban SDK. It provides a secure, immutable platform for managing personal notes directly on the blockchain. The contract ensures that your data is stored transparently and is only manageable through predefined smart contract functions, eliminating reliance on centralized database providers.
+Meowdoro DApp is a decentralized productivity application built on the Stellar blockchain using the Soroban SDK. It combines the Pomodoro technique with financial incentives by allowing users to stake cryptocurrency before starting a focus session.
 
-The system allows users to create, view, and delete notes, leveraging the efficiency and security of the Stellar network. Each note is uniquely identified and stored within the contract's instance storage, ensuring data persistence and reliability.
+The smart contract enforces accountability: users lock funds at the beginning of a session and can only reclaim them (with rewards) after successfully completing the timer. This creates a powerful behavioral loop that encourages focus and discipline.
+
+The system transforms time management into a trustless financial mechanism, where commitment is enforced by code rather than self-control alone.
+
+---
 
 ## Project Vision
 
-Our vision is to revolutionize personal productivity in the digital age by:
+Our vision is to redefine productivity by integrating behavioral psychology with decentralized finance:
 
-- **Decentralizing Data**: Moving note-taking from centralized servers to a global, distributed blockchain
-- **Ensuring Ownership**: Empowering users to have complete control and ownership over their digital thoughts and information
-- **Guaranteeing Immutability**: Providing a permanent, tamper-proof record of notes that cannot be altered or deleted by third parties
-- **Enhancing Privacy**: Leveraging blockchain security to protect personal information from unauthorized access
-- **Building Trustless Systems**: Creating a platform where data integrity is guaranteed by code, not by company promises
+* **Financial Accountability**: Turning focus into a commitment backed by real value
+* **Gamified Discipline**: Rewarding consistency through a growing virtual companion (the “Meowdoro cat”)
+* **Decentralized Commitment**: Removing reliance on apps that can be bypassed or ignored
+* **Accessible Productivity**: Leveraging Stellar’s low fees for micro-stakes
+* **Trustless Motivation**: Ensuring rules are enforced transparently by smart contracts
 
-We envision a future where digital information is truly personal and sovereign, empowering individuals with complete autonomy over their digital assets.
+We envision a future where productivity tools are not just reminders—but systems that align incentives with action.
+
+---
 
 ## Key Features
 
-### 1. **Simple Note Creation**
+### 1. **Focus Staking System**
 
-- Create notes with just one function call
-- Specify title and content for each note
-- Automated ID generation for unique identification
-- Persistent storage on the Stellar blockchain
+* Users stake XLM before starting a Pomodoro session
+* Funds are locked in the smart contract
+* Prevents early withdrawal without completion
 
-### 2. **Efficient Data Retrieval**
+---
 
-- Fetch all stored notes in a single call
-- Structured data representation for easy frontend integration
-- Quick access to your entire note collection
-- Real-time synchronization with the blockchain state
+### 2. **Session Completion Verification**
 
-### 3. **Secure Deletion**
+* Users mark sessions as complete after the timer ends
+* Contract verifies eligibility for reward
+* Ensures fair and consistent execution
 
-- Remove specific notes using their unique IDs
-- Permanent removal from the contract storage
-- Clean and efficient storage management
-- Immediate update of the note list after deletion
+---
 
-### 4. **Transparency and Security**
+### 3. **Reward Mechanism**
 
-- View all note activities on the blockchain
-- Blockchain-based verification of all storage actions
-- Immutable records of note creation and deletion
-- Protected against unauthorized modifications
+* Successful sessions return the stake + bonus
+* Encourages repeated usage and habit formation
+* Built for microtransactions using Stellar
 
-### 5. **Stellar Network Integration**
+---
 
-- Leverages the high speed and low cost of Stellar
-- Built using the modern Soroban Smart Contract SDK
-- Scalable architecture for growing note collections
-- Interoperable with other Stellar-based services
+### 4. **Gamified Growth (Meowdoro Cat 🐱)**
+
+* Each completed session grows a virtual cat
+* Visual feedback loop tied to financial success
+* Encourages long-term engagement
+
+---
+
+### 5. **Transparent & Secure Execution**
+
+* All transactions recorded on-chain
+* No manipulation of rewards or outcomes
+* Fully verifiable logic via smart contract
+
+---
 
 ## Contract Details
 
-- Contract Address: CBLU4IUASQ4WUMOXBFLZRSBBLILGOH33GS4LUPKFBCCCMJCDQNMF7G2M
-  (Screenshot has been removed)
+* Network: Stellar Soroban Testnet
+* Core Functions:
+
+  * `stake()` – Lock funds to begin a session
+  * `complete()` – Mark session as finished
+  * `claim()` – Retrieve stake + reward
+
+---
+
+## How It Works (MVP Flow)
+
+1. User starts a Pomodoro session
+2. Calls `stake()` with XLM amount
+3. Smart contract locks funds
+4. After timer → user calls `complete()`
+5. User calls `claim()`
+6. Contract releases reward
+
+⏱️ Demo time: **under 2 minutes**
+
+---
+
+## Stellar Features Used
+
+* **XLM Transfers** – Micro-staking and rewards
+* **Soroban Smart Contracts** – Enforcing session rules
+* **Low Fees & Fast Finality** – Enables real-time productivity cycles
+
+---
 
 ## Future Scope
 
 ### Short-Term Enhancements
 
-1. **Note Encryption**: Support for end-to-end encryption of note content for enhanced privacy
-2. **Category Management**: Add tags and categories to organize notes efficiently
-3. **Rich Text Support**: Extend support beyond plain text to include Markdown and formatted content
-4. **Search Functionality**: Implement advanced search filters for large note collections
+1. **Real Token Integration**
+
+   * Use actual XLM/USDC transfers instead of simulated balances
+
+2. **Session Timer Enforcement**
+
+   * On-chain timestamp validation for stricter rules
+
+3. **UI Dashboard**
+
+   * Live Pomodoro timer + animated cat growth
+
+4. **Session History**
+
+   * Track completed sessions and earnings
+
+---
 
 ### Medium-Term Development
 
-5. **Collaborative Notes**: Implement multi-signature requirements for shared or collaborative note-taking
-   - Shared access for multiple addresses
-   - Permission-based editing and viewing
-   - Version history tracking
-6. **Notification System**: Off-chain bridge to alert users of new updates or shared notes
-7. **Asset Attachment**: Capability to attach digital assets or tokens to specific notes
-8. **Inter-Contract Integration**: Allow other smart contracts to interact with and store data in the notes contract
+5. **Group Accountability Mode**
+
+   * Shared staking pools (like Meowdoro Group)
+   * Reward only consistent participants
+
+6. **NFT Cat Evolution**
+
+   * Mint evolving NFTs based on productivity streaks
+
+7. **Leaderboard System**
+
+   * Rank users based on focus consistency
+
+8. **Freelancer Mode**
+
+   * Clients fund sessions → pay only if completed
+
+---
 
 ### Long-Term Vision
 
-9. **Cross-Chain Synchronization**: Extend note storage to multiple blockchain networks
-10. **Decentralized UI Hosting**: Host the frontend on IPFS or similar decentralized platforms
-11. **AI-Powered Summarization**: Optional integration with AI to help users summarize their notes
-12. **Privacy Layers**: Implement zero-knowledge proofs for completely private note content
-13. **DAO Governance**: Community-driven protocol improvements and feature prioritization
-14. **Identity Management**: Integration with decentralized identity (DID) systems for user management
+9. **DeFi Integration**
 
-### Enterprise Features
+   * Stake funds into yield pools while user focuses
 
-15. **Corporate Documentation**: Adapt the system for secure corporate record-keeping
-16. **Immutable Logging**: Create time-locked logs for audit purposes
-17. **Automated Reporting**: Automatic note triggers for periodic reporting
-18. **Multi-Language Support**: Expand accessibility with internationalization
+10. **AI Productivity Coach**
+
+* Suggest optimal study intervals
+
+11. **Cross-Platform Sync**
+
+* Mobile + desktop + browser extensions
+
+12. **Education Partnerships**
+
+* Schools incentivizing study behavior
 
 ---
 
 ## Technical Requirements
 
-- Soroban SDK
-- Rust programming language
-- Stellar blockchain network
-
-## Getting Started
-
-Deploy the smart contract to Stellar's Soroban network and interact with it using the three main functions:
-
-- `create_note()` - Create a new note with a title and content
-- `get_notes()` - Retrieve all stored notes from the contract
-- `delete_note()` - Remove a specific note by its ID
+* Rust
+* Soroban SDK
+* Stellar CLI
 
 ---
 
-**Stellar Notes DApp** - Securing Your Thoughts on the Blockchain
+## Getting Started
+
+### Build Contract
+
+```bash
+soroban contract build
+```
+
+### Run Tests
+
+```bash
+cargo test
+```
+
+### Deploy
+
+```bash
+soroban contract deploy \
+  --wasm target/wasm32-unknown-unknown/release/meowdoro_pay.wasm \
+  --source alice \
+  --network testnet
+```
+
+### Example Interaction
+
+```bash
+soroban contract invoke \
+  --id CONTRACT_ID \
+  --fn stake \
+  --arg user \
+  --arg 10
+```
+
+---
+
+## Vision & Purpose
+
+Meowdoro bridges the gap between **intent and action** by attaching real value to time.
+Instead of relying on willpower alone, users commit financially to their goals—creating a system where productivity is both measurable and rewarding.
+
+---
+
+## License
+
+MIT
+
+---
+
